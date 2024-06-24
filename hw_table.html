@@ -2,9 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #483D8B;
+            color: white;
+        }
+        /* Fixed header */
+        thead {
+            position: sticky;
+            top: 0;
+        }
+        /* Fixed first column */
+        tbody th:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 1;
+        }
+        /* Set a fixed height for scrolling */
+        .scrollable-table {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
 </head>
 <body>
-
+    <div class="scrollable-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Club</th>
+                    <th>Country</th>
+                    <th>League</th>
+                    <th>Titles</th>
+                    <th>Top Scorer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>FC Barcelona</th>
+                    <td>Spain</td>
+                    <td>La Liga</td>
+                    <td>26</td>
+                    <td>Lionel Messi</td>
+                </tr>
+                <tr>
+                    <th>Liverpool FC</th>
+                    <td>England</td>
+                    <td>Premier League</td>
+                    <td>19</td>
+                    <td>Mo Salah</td>
+                </tr>
+                <tr>
+                    <th>Bayern Munich</th>
+                    <td>Germany</td>
+                    <td>Bundesliga</td>
+                    <td>30</td>
+                    <td>Robert Lewandowski</td>
+                </tr>
+                <tr>
+                    <th>Real Madrid</th>
+                    <td>Spain</td>
+                    <td>La Liga</td>
+                    <td>34</td>
+                    <td>Cristiano Ronaldo</td>
+                </tr>
+                <tr>
+                    <th>AC Milan</th>
+                    <td>Italy</td>
+                    <td>Serie A</td>
+                    <td>18</td>
+                    <td>Marco van Basten</td>
+                </tr>
+                <tr>
+                    <th>Juventus</th>
+                    <td>Italy</td>
+                    <td>Serie A</td>
+                    <td>17</td>
+                    <td>Alessandro Del Piero</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
